@@ -1,0 +1,92 @@
+:root{
+    --coloruno: #f9059a;
+    --colordos: #d9f1ff; 
+    --colortres: #e0908c;
+    --degradado:linear-gradient(90deg, var(--coloruno),var(--colortres));
+}
+body{
+    background-image: url(fondo1.jpg);
+}
+
+/* Estilo general para pantallas menores a 992px */
+.main-custom {
+    width: 80%; /* Ancho al 80% */
+    margin-right: auto; /* Centrado horizontal */
+    margin-left: auto; /* Centrado horizontal */
+}
+
+/* Estilos para dispositivos grandes (992px y más) */
+@media (min-width: 992px) {
+    .main-custom {
+        width: 40%; /* Ancho al 60% para pantallas grandes */
+    }
+}
+
+.bg-banner{
+    background-image: url(header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-headerVolante{
+    background: var(--degradado);
+}
+.headerVolante img{
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 250px;
+    border-radius: 50%;
+}
+.accordion-item{
+    background-color: var(--coloruno);
+}
+.accordion-button{
+    background-color: var(--colortres);
+}
+.accordion-button:hover{
+    background-color: var(--colordos);
+}
+.accordion-body{
+    background-color: var(--colordos);
+}
+.btn-primary{
+    background: var(--degradado);
+}
+.btn-primary:hover{
+    background: var(--colordos);
+    color: var(--coloruno);
+}
+.card{
+    box-shadow: 10px 10px 15px slategrey;
+}
+.navegador ul a{
+    background-color: var(--coloruno);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: inline-block;
+}
+.navegador ul a:hover{
+    color: var(--colordos);
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+/* Se aplica la animación a la burbuja */
+.whatsapp-bubble {
+    animation: bounce 0.5s ease-in-out 2;
+    /* Resto del estilo de la burbuja */
+  }
